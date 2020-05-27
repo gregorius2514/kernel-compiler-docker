@@ -1,9 +1,9 @@
 FROM ubuntu:18.04
 
-ADD ./kernel /kernel
+ADD ./kernel-source /kernel
 ADD ./patches /patches
-COPY ./compile.sh /kernel/linux-5.5.8/compile.sh
-COPY ./config /kernel/linux-5.5.8/.config
+COPY ./compile.sh /kernel/linux-source/compile.sh
+COPY ./config /kernel/linux-source/.config
 WORKDIR /kernel
 
 ARG DEBIAN_FRONTEND=noninteractive
